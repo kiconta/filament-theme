@@ -1,4 +1,4 @@
-# This is my package filament-theme
+# KICONTA filament-theme
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kiconta/filament-theme.svg?style=flat-square)](https://packagist.org/packages/kiconta/filament-theme)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/kiconta/filament-theme/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/kiconta/filament-theme/actions?query=workflow%3Arun-tests+branch%3Amain)
