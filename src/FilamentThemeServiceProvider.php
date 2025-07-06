@@ -1,8 +1,9 @@
 <?php
+
 namespace Kiconta\FilamentTheme;
 
-use Kiconta\FilamentTheme\Console\FilamentThemeInstall;
 use Illuminate\Support\ServiceProvider;
+use Kiconta\FilamentTheme\Console\FilamentThemeInstall;
 
 class FilamentThemeServiceProvider extends ServiceProvider
 {
@@ -11,7 +12,6 @@ class FilamentThemeServiceProvider extends ServiceProvider
         $this->commands([
             FilamentThemeInstall::class,
         ]);
-
 
         $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/kiconta-filament-theme'),

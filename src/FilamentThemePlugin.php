@@ -5,10 +5,8 @@ namespace Kiconta\FilamentTheme;
 use Filament\Contracts\Plugin;
 use Filament\FontProviders\GoogleFontProvider;
 use Filament\Panel;
-use Filament\Support\Assets\Theme;
-use Kiconta\FilamentTheme\Support\Colors\Color;
-use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentColor;
+use Kiconta\FilamentTheme\Support\Colors\Color;
 
 class FilamentThemePlugin implements Plugin
 {
@@ -17,7 +15,6 @@ class FilamentThemePlugin implements Plugin
         return new static;
     }
 
-    
     public function getId(): string
     {
         return 'kiconta-filament-theme';
@@ -42,8 +39,8 @@ class FilamentThemePlugin implements Plugin
         ]);*/
 
         $panel->colors([
-            'white' => "#ffffff",
-            'black' => "#000000",
+            'white' => '#ffffff',
+            'black' => '#000000',
             'gray' => Color::Gray,
             'primary' => Color::Primary,
             'secondary' => Color::Secondary,
@@ -52,8 +49,8 @@ class FilamentThemePlugin implements Plugin
             'warning' => Color::Warning,
             'info' => Color::Secondary,
         ])
-        ->viteTheme('vendor/kiconta/kiconta-filament-theme/resources/css/theme.css')
-        ->font('Inter', provider: GoogleFontProvider::class);
+            ->viteTheme('vendor/kiconta/kiconta-filament-theme/resources/css/theme.css')
+            ->font('Inter', provider: GoogleFontProvider::class);
 
     }
 
