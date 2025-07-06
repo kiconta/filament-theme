@@ -14,40 +14,26 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require kiconta/filament-theme
+composer require kiconta/kiconta-filament-theme
 ```
 
-You can publish and run the migrations with:
+To install the theme's required JS libraries (install TailwindCSS plugins: forms, typography, and also postcss, and autoprefixer. Create postcss.config.js if it not exists yet), run:
 
 ```bash
-php artisan vendor:publish --tag="filament-theme-migrations"
-php artisan migrate
+php artisan kiconta-filament-theme:install
+```
 ```
 
-You can publish the config file with:
+Add a new item to the `input` array of your `vite.config.js` file:
+
+```js
+'vendor/kiconta/kiconta-filament-theme/resources/css/theme.css'
+```
+
+Run:
 
 ```bash
-php artisan vendor:publish --tag="filament-theme-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filament-theme-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-## Usage
-
-```php
-$filamentTheme = new Kiconta\FilamentTheme();
-echo $filamentTheme->echoPhrase('Hello, Kiconta!');
+npm run build
 ```
 
 ## Testing
@@ -55,6 +41,18 @@ echo $filamentTheme->echoPhrase('Hello, Kiconta!');
 ```bash
 composer test
 ```
+
+Register the plugin on your panel (e.g. `/app/Providers/Filament/AdminPanelProvider.php`):
+
+```php
+use Kiconta\FilamentTheme\FilamentThemePlugin;
+Plugin;
+
+$panel
+  ->plugin(use Kiconta\FilamentTheme\FilamentThemePlugin;
+::make())
+```
+
 
 ## Changelog
 

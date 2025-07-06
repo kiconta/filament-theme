@@ -1,5 +1,5 @@
 {
-    "name": "kiconta/filament-theme",
+    "name": "kiconta/kiconta-filament-theme",
     "description": "This is my package filament-theme",
     "keywords": [
         "kiconta",
@@ -14,8 +14,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "joinapi",
-            "email": "devops@joinapi.io",
+            "name": "Rodrigo Souza",
+            "email": "devops@kiconta.com.br",
             "role": "Developer"
         }
     ],
@@ -23,7 +23,6 @@
         "php": "^8.1",
         "filament/filament": "^3.2",
         "filament/support": "^3.2",
-        "spatie/laravel-package-tools": "^1.15.0",
         "illuminate/contracts": "^10.0|^11.0|^12.0"
     },
     "require-dev": {
@@ -45,8 +44,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kiconta\\FilamentTheme\\": "src/",
-            "Kiconta\\FilamentTheme\\Database\\Factories\\": "database/factories/"
+            "Kiconta\\FilamentTheme\\": "src/"
         }
     },
     "autoload-dev": {
@@ -72,10 +70,7 @@
         "laravel": {
             "providers": [
                 "Kiconta\\FilamentTheme\\FilamentThemeServiceProvider"
-            ],
-            "aliases": {
-                "FilamentTheme": "Kiconta\\FilamentTheme\\Facades\\FilamentTheme"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

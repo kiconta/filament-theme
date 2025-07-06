@@ -1,0 +1,73 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+
+.fi-layout {
+  @apply bg-gray-100
+  /*dark:bg-[#252a35]*/
+  ;
+}
+
+.fi-topbar nav,
+.fi-sidebar-header {
+  @apply bg-gray-100 shadow-none ring-0
+  /*dark:bg-[#252a35]*/
+
+}
+
+.fi-sidebar-header {
+  @apply max-w-[276px]
+  /*dark:bg-[#252a35]*/
+
+}
+
+.fi-sidebar {
+  @apply shadow-none
+}
+
+.fi-sidebar-header {
+  @apply h-[130px] items-end pb-[40px] ring-0 bg-gray-200
+}
+
+.fi-sidebar-nav {
+  @apply bg-gray-200 max-w-[276px]
+}
+
+.fi-sidebar-nav-groups {
+  @apply gap-[32px]
+}
+
+.fi-sidebar-group-label {
+  @apply text-neutral-400
+}
+
+.fi-sidebar-item a {
+  @apply hover:bg-gray-100 hover:shadow-md text-neutral-700
+}
+
+.fi-sidebar-item-active a {
+  @apply bg-primary-900 shadow-sm hover:bg-primary-900
+}
+
+.fi-sidebar-item-icon {
+  @apply text-neutral-400
+}
+
+.fi-sidebar-item-active a svg,
+.fi-sidebar-item-active a span {
+  @apply text-neutral-50
+}
+
+.fi-logo {
+    @apply !h-[33px] w-[197px]
+  }
+  
+  
+  .fi-btn-color-primary {
+    @apply bg-primary-900 text-center text-sm text-white font-semibold leading-tight px-3 py-1.5 rounded-lg shadow-md inline-flex justify-center items-center gap-1.5 hover:bg-primary-500;
+  }
+  
+  .fi-ta {
+    @apply shadow-lg rounded-lg
+  }
