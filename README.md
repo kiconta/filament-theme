@@ -51,20 +51,23 @@ Plugin;
 $panel
   ->plugin(use Kiconta\FilamentTheme\FilamentThemePlugin;
 ::make())
+  ->font('Inter', provider: GoogleFontProvider::class)
+  //add image logo in public/images/{folder}
+  ->brandLogo(asset('images/kiconta-logo.svg'))
+  //change favicon image in public/favicon.svg
+  ->favicon(asset('favicon.svg'));
+
+  //Remember Logo and fivicon in public folder.
 ```
 
+## Color
+Color documentation [Documentation](https://devs.kiconta.com.br/fundamentos-visuais/cores)
 
-## Changelog
+## Logos Documentation
+Logos documentation [Documentation](https://devs.kiconta.com.br/fundamentos-visuais/logo)
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+## Lib Icons
+Lib Icons (Hero Icons) [Documentation](https://devs.kiconta.com.br/fundamentos-visuais/icones)
 
 ## Credits
 

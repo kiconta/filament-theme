@@ -6,7 +6,7 @@ use Filament\Contracts\Plugin;
 use Filament\FontProviders\GoogleFontProvider;
 use Filament\Panel;
 use Filament\Support\Facades\FilamentColor;
-use App\Providers\Filament\Support\Colors\Color;
+use Kiconta\FilamentTheme\Support\Colors\Color;
 
 class FilamentThemePlugin implements Plugin
 {
@@ -50,12 +50,7 @@ class FilamentThemePlugin implements Plugin
             'info' => Color::Secondary,
         ])
             ->viteTheme('vendor/kiconta/kiconta-filament-theme/resources/css/theme.css')
-            ->font('Inter', provider: GoogleFontProvider::class)
-            ->brandName('Kiconta')
-            //add image logo in public/images/{folder}
-            ->brandLogo(asset('images/kiconta-logo.svg'))
-            //change favicon image in public/favicon.svg
-            ->favicon(asset('favicon.svg'));
+            ->font('Inter', provider: GoogleFontProvider::class);
 
     }
 
