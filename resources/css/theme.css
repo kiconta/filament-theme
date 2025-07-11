@@ -1,4 +1,4 @@
-@import '/vendor/filament/filament/resources/css/theme.css';
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
 
 @config 'tailwind.config.js';
 
@@ -60,14 +60,94 @@
 }
 
 .fi-logo {
-    @apply !h-[33px] w-[197px]
-  }
-  
-  
-  .fi-btn-color-primary {
-    @apply bg-primary-900 text-center text-sm text-white font-semibold leading-tight px-3 py-1.5 rounded-lg shadow-md inline-flex justify-center items-center gap-1.5 hover:bg-primary-500;
-  }
-  
-  .fi-ta {
-    @apply shadow-lg rounded-lg
-  }
+  @apply !h-[33px] w-[197px]
+}
+
+
+.fi-btn-color-primary {
+  @apply bg-primary-900 text-center text-sm text-white font-semibold leading-tight px-3 py-1.5 rounded-lg shadow-md inline-flex justify-center items-center gap-1.5 hover:bg-primary-500;
+}
+
+
+
+.fi-resource-list-records-page {}
+
+.fi-tabs {
+  @apply ml-[20px] mb-[-113px] z-20;
+  background: none;
+  box-shadow: none;
+}
+
+.fi-tabs-item {
+  @apply min-w-[100px] rounded-t-[20px] rounded-b-[0];
+  border: 1px solid #e5e5e5;
+}
+
+.fi-ta {
+  @apply rounded-lg pt-[20px];
+}
+
+.fi-ta-ctn {
+  background: none;
+  @apply !ring-0;
+  --tw-ring-offset-shadow: none !important;
+  --tw-ring-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.fi-ta-ctn {
+  @apply flex flex-col;
+}
+
+.fi-ta-header-toolbar {
+  @apply z-10
+}
+
+.fi-ta-selection-indicator {
+  align-self: end;
+  background: none;
+  border: none;
+  @apply flex gap-5;
+}
+
+.fi-ta-actions {}
+
+.fi-ta-table thead tr {
+  @apply bg-white
+}
+
+.fi-ta-table thead tr>*:nth-child(2) span span {
+  border-left: none !important;
+}
+
+.fi-ta-header-cell span span {
+  border-left: 2px solid rgba(191, 191, 191, 1) !important;
+  @apply text-neutral-500 pl-[20px] ml-[-20px]
+}
+
+.fi-ta-content {
+  border: 1px solid rgba(191, 191, 191, 1) !important;
+  @apply bg-white rounded-[20px] mb-[25px]
+}
+
+.fi-ta-text-item-label {
+  @apply text-neutral-500;
+}
+
+
+.fi-checkbox-input {
+  border: 1px solid rgba(112, 112, 112, 1) !important;
+}
+
+.fi-ta-toggle div {
+  @apply bg-success-500;
+}
+
+.fi-pagination {
+  border: 1px solid rgba(191, 191, 191, 1) !important;
+  @apply bg-white rounded-[20px]
+}
+
+.fi-pagination-overview {
+  @apply text-gray-600
+}
