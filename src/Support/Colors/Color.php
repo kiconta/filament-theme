@@ -20,6 +20,7 @@ class Color
         900 => '32, 59, 136',
         950 => '24, 38, 83',
     ];
+
     public const Secondary = [
         50 => '255, 251, 234',
         100 => '255, 242, 197',
@@ -45,7 +46,7 @@ class Color
         700 => '64, 64, 64',
         800 => '38, 38, 38',
         900 => '23, 23, 23',
-        950 => '10, 10, 10'
+        950 => '10, 10, 10',
     ];
 
     public const Warning = [
@@ -90,7 +91,7 @@ class Color
         950 => '7, 39, 19',
     ];
 
-    //Native Filament Color below
+    // Native Filament Color below
     public const Slate = [
         50 => '248, 250, 252',
         100 => '241, 245, 249',
@@ -104,6 +105,7 @@ class Color
         900 => '15, 23, 42',
         950 => '2, 6, 23',
     ];
+
     public const Zinc = [
         50 => '250, 250, 250',
         100 => '244, 244, 245',
@@ -451,7 +453,7 @@ class Color
             'success' => static::Success,
             'gray' => static::Gray,
 
-            //Native Filament Color below
+            // Native Filament Color below
             'slate' => static::Slate,
             'zinc' => static::Zinc,
             'neutral' => static::Neutral,
