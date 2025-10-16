@@ -1,3 +1,292 @@
-@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@import "../../../../vendor/filament/filament/resources/css/theme.css";
+@import "./variables.css";
+@import "./month-filter.css";
+@import "./table.css";
+@import "./edit-mode-row.css";
+@import "./instalment-modal.css";
 
 @config 'tailwind.config.js';
+
+.fi-layout {
+    @apply bg-gray-100
+        /*dark:bg-[#252a35]*/;
+}
+
+.fi-topbar nav,
+.fi-sidebar-header {
+    @apply bg-gray-100 shadow-none ring-0
+        /*dark:bg-[#252a35]*/;
+}
+
+nav .fi-dropdown-panel {
+    @apply !max-w-[800px] !z-50;
+}
+
+.fi-sidebar-header {
+    @apply max-w-[276px]
+        /*dark:bg-[#252a35]*/;
+}
+
+.fi-sidebar {
+    @apply shadow-none;
+}
+
+.fi-sidebar-header {
+    @apply h-[130px] items-end pb-[40px] ring-0 bg-gray-200;
+}
+
+.fi-sidebar-nav {
+    @apply bg-gray-200 max-w-[276px];
+    display: grid;
+    grid-template-areas:
+    'groups'
+    'tenant-menu';
+    grid-template-rows: 1fr auto;
+    height: 100%;
+}
+
+.fi-sidebar-nav-groups {
+    @apply gap-[32px];
+    grid-area: groups;
+}
+
+.fi-sidebar-nav-tenant-menu-ctn {
+    grid-area: tenant-menu;
+    height: fit-content;
+    margin-bottom: 80px;
+}
+
+.fi-avatar {
+    @apply h-[50px] w-[50px] rounded-full;
+}
+
+.fi-sidebar-group-label {
+    @apply text-neutral-400;
+}
+
+.fi-sidebar-item a {
+    @apply hover:bg-gray-100 hover:shadow-md text-neutral-700;
+}
+
+.fi-sidebar-item:last-child {
+    margin-top: 70px;
+    padding-top: 32px;
+    border-top: 1px solid #acacac;
+}
+
+.fi-sidebar-item-active a {
+    @apply shadow-sm bg-primary-900 hover:bg-primary-900;
+}
+
+.fi-sidebar-item-icon {
+    @apply text-neutral-400;
+}
+
+.fi-sidebar-item-active a svg,
+.fi-sidebar-item-active a span {
+    @apply text-neutral-50;
+}
+
+.fi-logo {
+    @apply !h-[33px] w-[197px];
+}
+
+.fi-main {
+    @apply pl-4 pr-5;
+}
+
+.fi-btn-color-primary {
+    @apply bg-primary-900 text-center text-sm text-white font-semibold leading-tight px-3 py-1.5 rounded-lg shadow-md inline-flex justify-center items-center gap-1.5 hover:bg-primary-500;
+}
+
+.fi-resource-list-records-page {
+}
+
+.fi-tabs {
+    @apply w-[95%] mb-[-50px];
+    background: none;
+    box-shadow: none;
+    padding: 0 !important;
+    padding-bottom: 2px !important;
+}
+
+.fi-tabs .fi-btn-icon {
+    width: 20px;
+    height: 20px;
+    color: #203b88 !important;
+}
+
+.fi-tabs-item {
+    @apply min-w-[130px] rounded-[20px] h-[42px] shadow-sm;
+    border: 1px solid #e5e5e5;
+}
+
+[data-tab-color] {
+    background-color: #fff;
+    color: var(--tab-color) !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+[data-tab-color] span {
+    color: var(--tab-color) !important;
+}
+[data-tab-color][aria-selected] {
+    background-color: var(--tab-color) !important;
+    border: 1px solid var(--tab-color) !important;
+}
+
+[data-tab-color][aria-selected] span {
+    color: #fff !important;
+}
+
+.fi-ta {
+    @apply rounded-lg;
+}
+
+.fi-ta-header-toolbar {
+    @apply ml-auto w-fit;
+}
+
+.fi-ta-header-toolbar [title='Alternar colunas'] {
+    @apply hidden;
+}
+
+.fi-ta-selection-indicator {
+    @apply bg-transparent;
+}
+
+.fi-ta-ctn {
+    background: none;
+    @apply !ring-0;
+    --tw-ring-offset-shadow: none !important;
+    --tw-ring-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header {
+    flex: 1;
+    min-width: 0;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header .fi-tabs {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header .fi-tabs-item {
+    min-width: 80px !important;
+    height: 32px !important;
+    border-radius: 6px !important;
+    margin-right: 6px !important;
+    font-size: 0.8rem !important;
+    border: 1px solid #e5e7eb !important;
+    background: #f9fafb !important;
+    transition: all 0.2s ease !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header .fi-tabs-item[aria-selected='true'] {
+    background: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    color: white !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header .fi-tabs-item:hover {
+    background: #e5e7eb !important;
+    border-color: #d1d5db !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header .fi-tabs-item[aria-selected='true']:hover {
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+}
+
+.custom-table-with-tabs-in-header .month-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+/* Manter as tabs coloridas com data-tab-color */
+.custom-table-with-tabs-in-header .tabs-in-header [data-tab-color='green'][aria-selected='true'] {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header [data-tab-color='red'][aria-selected='true'] {
+    background-color: #ef4444 !important;
+    border-color: #ef4444 !important;
+}
+
+.custom-table-with-tabs-in-header .tabs-in-header [data-tab-color='orange'][aria-selected='true'] {
+    background-color: #f97316 !important;
+    border-color: #f97316 !important;
+}
+
+.fi-ta-table thead tr {
+    @apply bg-white;
+}
+
+.fi-ta-table thead tr > *:nth-child(2) span span {
+    border-left: none !important;
+}
+
+.fi-ta-header-cell:not(:first-of-type) span span {
+    border-left: 2px solid rgba(191, 191, 191, 1) !important;
+    @apply text-neutral-500 pl-[20px] ml-[-17px];
+}
+
+.fi-ta-content {
+    border: 1px solid rgba(191, 191, 191, 1) !important;
+    /* border-bottom: none !important; */
+    @apply bg-white rounded-t-[20px];
+}
+.total_values_row {
+    border: 1px solid rgba(191, 191, 191, 1) !important;
+    border-top: none !important;
+    border-radius: 0px 0px 15px 15px !important;
+}
+
+.fi-ta-text-item-label {
+    @apply text-neutral-500;
+}
+
+.fi-ta-col-wrp [aria-checked='false'] {
+    @apply bg-gray-300;
+}
+
+.fi-checkbox-input {
+    border: 1px solid rgba(112, 112, 112, 1) !important;
+}
+
+.fi-ta-toggle div {
+    @apply bg-success-500;
+
+    &[aria-checked='false'] {
+        @apply bg-secondary;
+    }
+}
+
+.fi-pagination {
+    border: 1px solid rgba(191, 191, 191, 1) !important;
+    @apply bg-white rounded-[20px];
+}
+
+.fi-pagination-overview {
+    @apply text-gray-600;
+}
+
+.fi-page-header-widgets {
+    @apply mb-8;
+}
+
+.fi-section {
+    @apply bg-[#F5F5F5] border-0 shadow-none rounded-none ring-0;
+}
+
+.fi-section-content {
+    @apply p-0;
+}
