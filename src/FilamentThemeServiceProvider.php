@@ -22,6 +22,5 @@ class FilamentThemeServiceProvider extends ServiceProvider
             __DIR__ . '/../public' => base_path('public'),
         ], 'kiconta-filament-theme-assets');
 
-
     }
 }
