@@ -3,7 +3,6 @@
 namespace Kiconta\FilamentTheme\Console;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
 use Kiconta\FilamentTheme\FilamentThemeServiceProvider;
 
 class FilamentThemeInstall extends Command
@@ -31,8 +30,6 @@ class FilamentThemeInstall extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return int
      */
     public function handle(): int
     {
