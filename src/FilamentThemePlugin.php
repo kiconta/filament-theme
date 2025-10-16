@@ -5,7 +5,7 @@ namespace Kiconta\FilamentTheme;
 use Filament\Contracts\Plugin;
 use Filament\FontProviders\GoogleFontProvider;
 use Filament\Panel;
-use Filament\Support\Facades\FilamentColor;
+use Filament\Support\Enums\MaxWidth;
 use Kiconta\FilamentTheme\Support\Colors\Color;
 
 class FilamentThemePlugin implements Plugin
@@ -49,7 +49,14 @@ class FilamentThemePlugin implements Plugin
             'warning' => Color::Warning,
             'info' => Color::Secondary,
         ])
-            ->viteTheme('vendor/kiconta/kiconta-filament-theme/resources/css/theme.css')
+            ->viteTheme('resources/css/filament/kiconta/theme.css')
+            ->sidebarCollapsibleOnDesktop()
+            ->sidebarWidth('17rem')
+            ->breadcrumbs(false)
+            ->darkMode(false)
+            ->maxContentWidth(MaxWidth::Full)
+            ->brandLogo(asset('images/kiconta-logo.svg'))
+            ->favicon(asset('favicon.ico'))
             ->font('Inter', provider: GoogleFontProvider::class);
 
     }

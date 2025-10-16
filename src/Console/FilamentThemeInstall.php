@@ -4,9 +4,17 @@ namespace Kiconta\FilamentTheme\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Kiconta\FilamentTheme\FilamentThemeServiceProvider;
 
 class FilamentThemeInstall extends Command
 {
+    public const SUCCESS = 0;
+
+    /**
+     * @var 1
+     */
+    public const FAILURE = 1;
+
     /**
      * The name and signature of the console command.
      *
@@ -21,46 +29,19 @@ class FilamentThemeInstall extends Command
      */
     protected $description = 'Install Filament Kiconta theme assets';
 
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     /**
      * Execute the console command.
      *
-     * @return mixed
+     * @return int
      */
-    public function handle()
+    public function handle(): int
     {
-        $this->info('Publishing Vendor Assets...');
+        $this->info('Installing the Kiconta filament theme...');
 
-        exec('npm -v', $npmVersion, $npmVersionExistCode);
-
-        if ($npmVersionExistCode !== 0) {
-            $this->error('Node.js is not installed. Please install it before continuing.');
-
-            return static::FAILURE;
-        }
-
-        $this->info("Using NPM v{$npmVersion[0]} to install the required TailwindCSS plugins: forms, typography, and also postcss, postcss-nesting, and autoprefixer...");
-
-        exec('npm install tailwindcss @tailwindcss/forms @tailwindcss/typography postcss postcss-nesting autoprefixer --save-dev');
-
-        $this->info('Checking if postcss.config.js file exists and creating it if not...');
-
-        $postcssConfigPath = base_path('postcss.config.js');
-
-        if (! File::exists($postcssConfigPath)) {
-            File::copy(__DIR__ . '/../../stubs/postcssConfig.stub', base_path('postcss.config.js'));
-
-            $this->info('postcss.config.js file created.');
-        }
-
-        $this->info('Executing run npm install && npm run build');
-        exec('npm install && npm run build');
-
-        $this->info('Filament Nord Theme installed successfully!');
+        $this->call('vendor:publish', [
+            '--tag' => FilamentThemeServiceProvider::VENDOR_ASSET,
+            '--force' => true,
+        ]);
 
         return static::SUCCESS;
     }
