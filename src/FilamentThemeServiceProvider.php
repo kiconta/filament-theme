@@ -19,6 +19,7 @@ class FilamentThemeServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../resources/css' => resource_path('css'),
+            __DIR__ . '/../resources/images' => resource_path('images'),
             __DIR__ . '/../public' => base_path('public'),
         ], 'kiconta-filament-theme-assets');
 
