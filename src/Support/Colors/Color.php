@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers\Filament\Support\Colors;
+namespace Kiconta\FilamentTheme\Support\Colors;
 
 use Spatie\Color\Hex;
 use Spatie\Color\Rgb;

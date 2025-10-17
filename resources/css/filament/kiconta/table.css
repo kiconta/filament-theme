@@ -1,0 +1,143 @@
+/* Table Component Styles */
+
+.fi-ta-table tbody tr {
+    input:not([type="checkbox"]),
+    textarea,
+    select {
+        @apply !rounded-2xl !px-4 !py-3 !border-none;
+    }
+
+    &:hover,
+    &:has(+ .shadow-fields-row) {
+        @apply bg-grayHover cursor-pointer;
+    }
+
+    &.shadow-fields-row td {
+        @apply !bg-grayHover;
+    }
+
+    &:has(+ .shadow-fields-row) {
+        .fi-ta-actions {
+            @apply gap-5;
+        }
+    }
+
+    .fi-ta-save-edit-button,
+    .fi-ta-cancel-edit-button {
+        @apply bg-white rounded-full;
+    }
+
+    .fi-ta-cancel-edit-button {
+        @apply text-red-600;
+    }
+}
+
+.save-btn {
+    @apply !block;
+
+    .fi-btn-icon {
+        @apply text-primarySuccess h-6 w-6;
+    }
+}
+
+.cancel-btn {
+    @apply !block;
+
+    .fi-btn-icon {
+        @apply text-danger h-6 w-6;
+    }
+}
+
+.fi-ta-row-fields-wrapper {
+    > .whitespace-nowrap {
+        @apply w-[108px];
+    }
+
+    .fi-ta-text {
+        @apply py-[14px];
+    }
+
+    .text-truncate {
+        .fi-ta-text {
+            div {
+                @apply block min-w-0;
+            }
+        }
+
+        .fi-ta-text-item-label {
+            display: inline-block;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .fi-ta-text-item-icon {
+        @apply text-primary-900 size-6;
+    }
+
+    [field_type="date"] .fi-ta-text-item-label {
+        @apply w-[88px] text-[15px] text-center;
+    }
+
+    .fi-ta-text-item {
+        @apply gap-1;
+    }
+
+    .fi-ac-icon-btn-group {
+        @apply border;
+    }
+}
+
+.add-new-transaction-row {
+    .date-input {
+        @apply max-w-[185px] w-full;
+    }
+
+    .description-input {
+        @apply flex-1 min-w-[115px];
+
+        .description-input {
+            @apply min-w-0;
+        }
+    }
+
+    .source-input {
+        @apply max-w-[175px] min-w-[144px] w-full;
+    }
+
+    .value-input {
+        @apply max-w-[157px] min-w-[96px] w-full;
+    }
+    .category-input {
+        @apply max-w-[170px] min-w-[127px] w-full;
+    }
+    .category-input,
+    .payment-type-input,
+    .source-input {
+        div {
+            @apply w-full;
+        }
+    }
+
+    .payment-type-input {
+        @apply max-w-[194px] min-w-[171px] w-full;
+    }
+
+    .paid-toggle {
+        @apply pr-0;
+    }
+}
+
+.fi-table-header-cell-data-emissao {
+    @apply min-w-[189px];
+}
+
+.fi-ta-actions {
+    @apply justify-center;
+
+    .fi-icon-btn {
+        @apply bg-white rounded-full hover:bg-gray-100;
+    }
+}

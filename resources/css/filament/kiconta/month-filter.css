@@ -1,0 +1,211 @@
+/* Month Filter Component Styles */
+
+.month-filter {
+  position: relative;
+}
+
+.month-filter__container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgb(243 244 246);
+  border-radius: 9999px;
+  padding: 0.25rem;
+  width: fit-content;
+  border: 1px solid rgb(156 163 175);
+  margin-right: 1.25rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.month-filter__nav-button {
+  border-radius: 9999px !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.month-filter__nav-button:hover {
+  background-color: rgb(229 231 235) !important;
+}
+
+.month-filter__display {
+  padding: 0.375rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease-in-out;
+  min-width: 90px;
+  text-align: center;
+  color: #203B88;
+  border: none;
+  background: transparent;
+}
+
+.month-filter__display:hover {
+  background-color: rgb(249 250 251);
+}
+
+.month-filter__display:focus {
+  outline: none;
+  border-radius: 9999px;
+}
+
+.month-filter__modal {
+  position: fixed;
+  background-color: white;
+  border: 1px solid rgb(229 231 235);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  padding: 1.25rem;
+  width: 18rem;
+  z-index: 9999;
+}
+
+.month-filter__modal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #707070;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.month-filter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.month-filter__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.month-filter__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+}
+
+.month-filter__select,
+.month-filter__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 0.75rem;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.month-filter__select:focus,
+.month-filter__input:focus {
+  outline: none;
+  border: #909090;
+  border-color: transparent;
+}
+
+.month-filter__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.month-filter__button {
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.month-filter__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px;
+}
+
+.month-filter__button--secondary {
+  color: rgb(55 65 81);
+  background-color: rgb(243 244 246);
+}
+
+.month-filter__button--secondary:hover {
+  background-color: rgb(229 231 235);
+}
+
+.month-filter__button--secondary:focus {
+  box-shadow: 0 0 0 2px rgb(156 163 175);
+}
+
+.month-filter__button--primary {
+  color: white;
+  background-color: #203B88;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.month-filter__button--primary:hover {
+  background-color: #19306f;
+}
+
+.month-filter__button--primary:focus {
+  box-shadow: 0 0 0 2px #909090;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .month-filter__modal {
+    width: 16rem;
+    margin: 0 1rem;
+  }
+
+  .month-filter__container {
+    margin-right: 0.75rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .month-filter__container {
+    background-color: #f5f5f5;
+    border-color: #999999;
+  }
+
+  .month-filter__display {
+    color: #203B88;
+  }
+
+  .month-filter__display:hover {
+    background-color: #f0f0f0;
+  }
+
+  .month-filter__modal {
+    background-color: #f5f5f5;
+    border-color: #999999;
+  }
+
+  .month-filter__modal-title {
+    color: #707070;
+  }
+
+  .month-filter__label {
+    color: #707070;
+  }
+
+  .month-filter__select,
+  .month-filter__input {
+    background-color: #f5f5f5;
+    border-color: rgb(75 85 99);
+    color: #707070;
+  }
+}

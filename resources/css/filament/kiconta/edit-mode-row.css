@@ -1,0 +1,46 @@
+.fi-ta-edit-mode-row-active {
+    @apply bg-grayHover;
+
+    .fi-ta-row-fields-wrapper {
+        @apply pl-6 flex flex-1;
+
+        > :first-child {
+            @apply hidden;
+        }
+    }
+
+    .fi-ta-row-fields-wrapper > {
+        .description-input {
+            @apply flex-1 min-w-[130px];
+        }
+    }
+
+    .fi-ta-toggle {
+        @apply pt-2;
+    }
+
+    .fi-ta-row-fields-wrapper {
+        > .whitespace-nowrap {
+            @apply pt-2;
+        }
+    }
+}
+
+.calendar-icon {
+    input[type="date"] {
+        background-image: url("../../../images/icons/calendar-days.svg"); /* Path to your calendar icon */
+        background-repeat: no-repeat;
+        background-position: right 14px center; /* Adjust position as needed */
+        padding-right: 25px;
+
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+    }
+}
+
+.custom-select-button {
+    svg {
+        @apply size-7 text-primary-900;
+    }
+}
