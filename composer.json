@@ -2,7 +2,6 @@
     "name": "kiconta/filament-theme",
     "description": "Kiconta filament-theme",
     "type": "library",
-    "version": "1.0.0",
     "keywords": [
         "kiconta",
         "laravel",
