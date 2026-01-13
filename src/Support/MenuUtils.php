@@ -3,6 +3,7 @@
 namespace Kiconta\FilamentTheme\Support;
 
 use Filament\Support\Concerns\EvaluatesClosures;
+use Illuminate\Support\Facades\Log;
 
 class MenuUtils
 {
@@ -14,9 +15,17 @@ class MenuUtils
 
     public function __construct()
     {
-        $this->menu = config('kiconta-filament-theme.menu');
-        $this->menu_items = [];
-        $this->make();
+        $currentTenant = filament()->getTenant();
+
+        if ($currentTenant) {
+            $this->menu = config('kiconta-filament-theme.menu');
+            $this->menu_items = [];
+            $this->make();
+
+        }else{
+            $this->menu = [];
+            $this->menu_items = [];
+        }
     }
 
     protected function make(): void

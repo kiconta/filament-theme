@@ -41,23 +41,21 @@ nav .fi-dropdown-panel {
 
 .fi-sidebar-nav {
   @apply bg-gray-200 max-w-[276px];
-  display: grid;
   grid-template-areas:
-    'groups'
-    'tenant-menu';
+    'tenant-menu'
+    'groups';
   grid-template-rows: 1fr auto;
   height: 100%;
 }
 
 .fi-sidebar-nav-groups {
-  @apply gap-[32px];
+  @apply gap-[12px];
   grid-area: groups;
 }
 
 .fi-sidebar-nav-tenant-menu-ctn {
   grid-area: tenant-menu;
   height: fit-content;
-  margin-bottom: 80px;
 }
 
 .fi-avatar {
