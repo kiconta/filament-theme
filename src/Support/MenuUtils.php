@@ -3,7 +3,6 @@
 namespace Kiconta\FilamentTheme\Support;
 
 use Filament\Support\Concerns\EvaluatesClosures;
-use Illuminate\Support\Facades\Log;
 
 class MenuUtils
 {
@@ -22,7 +21,7 @@ class MenuUtils
             $this->menu_items = [];
             $this->make();
 
-        }else{
+        } else {
             $this->menu = [];
             $this->menu_items = [];
         }
